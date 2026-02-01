@@ -1,3 +1,21 @@
+[data-theme="great"] {
+    --buttonColor: linear-gradient(#6743ff, #312ce8);
+    --backgroundImage: linear-gradient(#6743ff, #312ce8);
+    --circleGradient: linear-gradient(#4d22cd, #4835ef);
+}
+
+[data-theme="avarage"] {
+    --buttonColor: linear-gradient(#00B43C, #0CF265);
+    --backgroundImage: linear-gradient(#0DF672, #0BEE57);
+    --circleGradient: linear-gradient(#1CC855, #0CF265);
+}
+
+[data-theme="bad"] {
+    --buttonColor: linear-gradient(rgb(116 9 9), #AA0F0F);
+    --backgroundImage: linear-gradient(#9b2a2aff, #b30000ff);
+    --circleGradient: linear-gradient(rgb(116 9 9), #AA0F0F);
+}
+
 body {
     font-family: "Hanken Grotesk";
     font-size: 18px;
@@ -13,7 +31,7 @@ body {
     align-items: center;
     border-radius: 0 0 8% 8%;
     color: white;
-    background-image: linear-gradient(#6743ff, #312ce8);
+    background-image: var(--backgroundImage);
     padding-bottom: 20px;
 
     #circle {
@@ -26,7 +44,7 @@ body {
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        background-image: linear-gradient(#4d22cd, #4835ef);
+        background-image: var(--circleGradient);
 
         h2 {
             font-size: 2.3em;
@@ -167,7 +185,7 @@ body {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: linear-gradient(#6743ff, #312ce8);
+    background-image: var(--buttonColor);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: -1;
